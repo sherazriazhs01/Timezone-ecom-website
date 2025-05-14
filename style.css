@@ -1,0 +1,439 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+/* Section-one */
+section{
+    min-height: 100vh;
+    width: 100%;
+}
+:root{
+    --dark-blue: #0a1d3c;
+    --light-gray:#e5e5e5;
+    --white: #fff;
+    --light-peach:#f9e3bc;
+    --light-black:#1d1d1d;
+    --dark-grey: #3e3f43;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    width: 80%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+header{
+    width: 80%;
+    height: calc(100vh - 13vh);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.navlinks{
+   display: flex;
+}
+.header-img{
+    width: 40rem;
+}
+.logo{
+    font-size: 3.3rem;
+    color: var(--dark-blue);
+    font-family: "Allison" , cursive;
+}
+li{
+    list-style: none;
+}
+.navlinks li a{
+    text-decoration: none;
+    color: var(--dark-grey);
+    margin-left: 2.5rem;
+    color: var(--dark-grey);
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    position: relative;
+}
+.header-heading{
+    font-size: 5rem;
+    position: relative;
+}
+.header-heading::before{
+    content: "New";
+    position: absolute;
+    top: -60px;
+    color: var(--dark-blue);
+    font-family: "Allison" , cursive;
+}
+.pd-name{
+    font-size: 1.7rem;
+}
+.pricing{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.btn-container{
+    display: flex;
+    margin-top: 2rem;
+
+}
+.prim-btn,.sec-btn{
+    font-size: 1.1rem;
+    border: none;
+    padding: 1rem 1.7rem;
+    transition: transform .5s ease-in-out;
+}
+.prim-btn{
+    background: var(--light-gray);
+}
+.sec-btn{
+    background: var(--dark-blue);
+    color: var(--white);
+    transform: scale(1.1);
+}
+.prim-btn:hover, .sec-two-btn:hover, .sec-four-btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.sec-btn:hover{
+    transform: scale(1);
+}
+.navlinks li a::after, li a.active::after{
+    content: "";
+    background: var(--dark-grey);
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+    transform-origin: right;
+}
+li a:hover::after , li a.active::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.line{
+    background: var(--dark-grey);
+    width: 2.5rem;
+    height: .2rem;
+    margin: .38rem;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+/* Section -Two */
+.sec-two{
+    display: flex;
+    align-items: center;
+}
+.sec-two-cont{
+    background: var(--light-peach);
+    width: 100%;
+    height: 50vh;
+    transform: skewY(-6deg);
+}
+.sec-two-img{
+    width: 28rem;
+}
+.sec-inner-cont{
+    transform: skewY(6deg);
+    /* background: var(red); */
+    width: 80%;
+    margin: auto;
+}
+.sec-two-cont, .sec-inner-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec-two-head{
+    color: var(--dark-grey);
+    font-size: 4rem;
+
+}
+.prod-para{
+    font-size: 1rem;
+    color:var(--dark-grey);
+    line-height: 1.8rem;
+    max-width: 80%;
+}
+.sec-two-price{
+    font-size: 1.6rem;
+    color:var(--dark-grey) ;
+    margin: .9rem 0;
+}
+.sec-two-btn{
+    padding: .9rem 1.7rem;
+    border: .1rem solid var(--light-black);
+    font-size: 1.1rem;
+    background: transparent;
+    transition: transform .5s ease;
+}
+/* Sec three */
+.sec-head{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;   
+}
+.card-cont{
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 3rem;
+}
+.card img{
+    width: 20rem;
+}
+.card{
+    background: var(--light-gray);
+    padding: 2rem;
+}
+.card-price{
+    font-size: 1.2rem;
+    margin-top: .2rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Section-four */
+.section-four{
+    display: flex;
+    align-items: center;
+}
+.sec-four-cont{
+    background-image: url("/images/watch.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height:70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.sec-offer{
+    font-size: 4rem;
+    color: var(--light-peach);
+    font-family: "Allison" , cursive;
+    text-transform: uppercase;
+}
+.sec-four-head{
+        color: var(--white);
+        font-size: 4rem;
+        margin-bottom: 1rem;
+}
+.sec-four-btn{
+    font-size: 1.1rem;
+    padding: 1rem 1.7rem;
+    background: var(--light-peach);
+    border: none;
+    transition: transform .5s ease;
+}
+.sec-four-cont::before{
+    content: "";
+    background: rgba(0, 0, 0,0.544);
+    position: absolute;
+    inset: 0;
+    
+}
+.content{
+    z-index:  1;
+}
+
+/* Section Five */
+    .grid-card-cont{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 1.2rem;
+        grid-auto-rows: 15rem;
+        /* background: red; */
+        height: 80vh;
+        width: 80%;
+        margin: auto;
+    }
+    .grid-card{
+        background: var(--light-gray);
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .grid-card:nth-child(1){
+        grid-row: 1/4;
+        background-image: url(/images/rado\ watch.jpg);
+    } 
+    .grid-card:nth-child(2){
+        background-image: url(/images/geneve\ watch.jpg);
+    }
+    .grid-card:nth-child(3){
+        grid-row: 1/3;
+        background-image: url(/images/tissot\ watch.jpg);
+    }  
+    .grid-card:nth-child(4){
+        grid-row: 3/4;
+        background-image: url(/images/cartier\ watch.jpg);
+    }
+     .grid-card:nth-child(5){
+        background-image: url(/images/omega\ blue.png);
+    }
+     .grid-card:nth-child(6){
+        background-image: url(/images/fitron\ watch.jpg);
+    }
+    .grid-card::before{
+        content: "";
+        position: absolute;
+        background: rgba(0, 0,0, 0.544);
+        inset: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 1s ease-in-out;
+    }
+    .grid-card:hover::before{
+        transform:scaleX(1) ;
+        transform-origin: left;
+        transform: ;
+    }
+    .grid-card::after{
+        content: attr(collection);
+        position: absolute;
+        text-transform: uppercase;
+        background-color: var(--light-peach);
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        padding: 1rem 1.7rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease-in-out;
+    }
+    .grid-card:hover::after{
+        opacity: 1;
+        visibility: visible;
+    }
+    /* Footer */
+    footer{
+        background: var(--light-black);
+        height: 20vh;
+        width: 100;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-txt{
+        color: white;
+        font-size: 1.5rem;
+    }
+
+/* Media Queries */
+@media screen and (max-width:500px) {
+    /* Section -one */
+    .header-img{
+        display: none;
+    }
+    .navlinks{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        background: var(--light-gray);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        right: 100%;
+        z-index: 2;
+        gap: 2rem;
+        transition:.5s ease-in-out ;
+    }
+    .navlinks-active{
+        right: 0;
+    }
+    li a {
+        font-size: 1.3rem;
+        color: var(--dark-grey);
+        margin-left: 0;
+    }
+    .hamburger{
+        display: block;
+        z-index: 5;
+    }
+    .logo{
+        z-index: 5;
+    }
+    .header-heading{
+        font-size: 4rem;
+    }
+    header{
+        /* background: red; */
+        justify-content: flex-start;
+    }
+    /* section-two Media */
+    .sec-two-img{
+        display: none;
+    }
+    .sec-two-head{
+        font-size: 2.9rem;
+    }
+    .prod-para{
+        font-size: .93rem;
+        max-width: 100%;
+    }
+    .sec-two-price{
+        font-size: 1.4rem;
+    }
+    .sec-two-btn{
+        font-size: 1rem;
+        padding: .7rem 1rem;
+    }
+    .sec-two-cont{
+        height: 60vh;
+    }
+    .sec-inner-cont{
+    width: 90%;
+    }
+    /* Sec -Three */
+    .card-img{
+        width: 17rem;
+    }
+    /* Sec-Four */
+    .sec-four-head{
+        font-size: 2.8rem;
+    }
+    .sec-offer{
+        font-size: 3.3rem;
+    }
+    .sec-four-btn{
+        font-size: 1.2rem;
+    }
+    /* Section Five */
+    .grid-card-cont{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        width: 90%;
+    }
+    .grid-card:nth-child(1),.grid-card:nth-child(3){
+        grid-row: 1/2;
+    }
+}
